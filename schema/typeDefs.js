@@ -6,13 +6,27 @@ const typeDefs = gql`
         name: String!
         age: Int!
         married: Boolean!    
+    },
+    
+    type Movie {
+        name: String!
     }
     
+    type GroceryCard {
+        deliveryParty: String!
+        isOpen: Boolean!
+        minimumOrderValue: Float!
+        currency: String!
+        shippingFee: Float!
+        delivers_to_requested_location: Boolean!
+    }
     
     # Queries
    type Query {
         getAllUsers: [User!]!,
-        getUser(name: String!): User!
+        getUser(name: String!): User!,
+        getFlinkCard(id: Int!): GroceryCard!
+        
    }
 `
 

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/berendvangaart/flink-graphql#readme",
   "dependencies": {
+    "apollo-datasource-rest": "^3.6.1",
     "apollo-server-express": "^2.21.2",
     "express": "^4.17.1",
     "graphql-tag": "^2.12.6",
