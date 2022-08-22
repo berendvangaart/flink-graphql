@@ -10,5 +10,5 @@ server.applyMiddleware({ app })
 const PORT = 3001
 
 app.listen(PORT, () => {
-    console.log(`🚀🚀 SERVER is listening op port: ${PORT}`)
+    console.log(`🚀🚀 SERVER is listening op port: ${PORT}  - http://localhost:${PORT}/graphql`)
 })

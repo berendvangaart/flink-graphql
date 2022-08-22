@@ -11,7 +11,8 @@ const typeDefs = gql`
     
     # Queries
    type Query {
-        getAllUsers: [User!]!
+        getAllUsers: [User!]!,
+        getUser(name: String!): User!
    }
 `
 
