@@ -11,6 +11,10 @@ const resolvers = {
         getFlinkCard: async (_, { id }, { dataSources }) => {
             return dataSources.FlinkAPI.getFlinkCard(id);
         },
+        getNLEetRestaurants: async (_, { lat,long }, { dataSources }) => {
+            return dataSources.nlEetAPI.getRestaurants(lat,long) ;
+
+        },
     }
 }
 

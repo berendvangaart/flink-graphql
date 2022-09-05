@@ -3,11 +3,15 @@ const express = require('express')
 const {typeDefs} = require('./schema/typeDefs')
 const {resolvers} = require("./schema/resolvers");
 const {FlinkAPI} = require("./schema/data-sources/FlinkApi");
+const {NLEetApi} = require("./schema/data-sources/NLEetApi");
 const app = express()
 
 const server = new ApolloServer({
     typeDefs, resolvers, dataSources: () => {
-        return {FlinkAPI: new FlinkAPI()}
+        return {
+            FlinkAPI: new FlinkAPI(),
+            nlEetAPI: new NLEetApi()
+        }
     }
 })
 server.applyMiddleware({ app })

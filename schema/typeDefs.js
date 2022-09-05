@@ -25,8 +25,8 @@ const typeDefs = gql`
    type Query {
         getAllUsers: [User!]!,
         getUser(name: String!): User!,
-        getFlinkCard(id: Int!): GroceryCard!
-        
+        getFlinkCard(id: Int!): GroceryCard!,
+        getNLEetRestaurants(lat: Float ,long: Float): String
    }
 `
 
